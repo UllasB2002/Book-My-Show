@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded",function(){
     const opt = document.getElementById("OTPclick")
     opt.addEventListener("click",function(e){
         const enterOTP = document.getElementById("OTP");
-        enterOTP.innerHTML = '<input type="text" placeholder="Enter your otp">'
+        enterOTP.innerHTML = '<input type="password" placeholder="Enter your OTP" id="OTPid">'
     })
 })
 
