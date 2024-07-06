@@ -27,6 +27,25 @@ document.addEventListener("DOMContentLoaded",function(e){
 })
 
 document.addEventListener("DOMContentLoaded",function(e){
+    const forgotPassword = document.getElementById("ForgotPassword");
+    const createNewAccount = document.getElementById("CreateNewUser");
+    forgotPassword.addEventListener("click", function(){
+        window.location.href="ForgotPassword.html"
+    })
+    createNewAccount.addEventListener("click",function(){
+
+    })
+})
+
+document.addEventListener("DOMContentLoaded",function(){
+    const opt = document.getElementById("OTPclick")
+    opt.addEventListener("click",function(e){
+        const enterOTP = document.getElementById("OTP");
+        enterOTP.innerHTML = '<input type="text" placeholder="Enter your otp">'
+    })
+})
+
+document.addEventListener("DOMContentLoaded",function(e){
     const name = localStorage.getItem("username");
     const para = document.getElementById("welcomeUser");
     para.textContent = `Welcome ${name}`

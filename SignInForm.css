@@ -2,7 +2,16 @@
     
     background-color:white;
     width: 400px;
-    height: 350px;
+    height: 400px;
+    border-radius: 30px;
+    padding-left: 50px;
+}
+
+#FormForForgotPassword{
+    
+    background-color:white;
+    width: 400px;
+    height: 300px;
     border-radius: 30px;
     padding-left: 50px;
 }
@@ -28,7 +37,7 @@
     color: white;
     background-color: red;
     border: 0;
-    margin: 20px 0 0 100px;
+    margin: 20px 0 10px 100px;
 }
 body{
     display: flex;
@@ -42,4 +51,38 @@ body{
 *{
     margin: 0;
     padding: 0;
+}
+
+#ForgotPassword{
+    border: 0;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+#CreateNewUser {
+    border: 0;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+#OTPclick{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: 2;
+    background-color: red;
+    color: white;
+    height: 25px;
+    padding-top: 3px;
+    margin-top: 20px;
+}
+
+#OTP{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: 2;
+    height: 25px;
+    padding-top: 3px;
+    margin-top: 20px;
 }
