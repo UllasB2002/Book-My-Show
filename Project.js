@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded",function(e){
         window.location.href="ForgotPassword.html"
     })
     createNewAccount.addEventListener("click",function(){
+        window.location.href="CreatePassword.html"
 
     })
 })
@@ -75,7 +76,7 @@ document.addEventListener("DOMContentLoaded",function(e){
         } else {
             const userOtp = document.getElementById("NewUserOTP");
             userOtp.innerHTML='<input type="number" class="OTP" id="CreateUserOtp">';
-
+            NewUserConfirm.removeEventListener("click",this)
             NewUserConfirm.setAttribute("id","CreateUserButtonNew")
             NewUserConfirm.innerText="Confirm OTP";
 
@@ -83,8 +84,9 @@ document.addEventListener("DOMContentLoaded",function(e){
 
             NewUserOTP.addEventListener("click",function(e){
                 const NewUserOTPEnter = document.getElementById("CreateUserOtp").value;
-                if(NewUserOTPEnter == 1234){
+                NewUserOTPEnter = 1234;
 
+                if(NewUserOTPEnter == 1234){
                     alert("Login Successfull")
                 }
                 else{
