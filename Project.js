@@ -51,6 +51,50 @@ document.addEventListener("DOMContentLoaded",function(e){
     para.textContent = `Welcome ${name}`
 })
 
+// This ths javaSCript File for Create User
 
+document.addEventListener("DOMContentLoaded",function(e){
+    const NewUserConfirm = document.getElementById("CreateUserButton");
+    NewUserConfirm.addEventListener("click",function(){
+        const firstName = document.getElementById("FirstName").value;
+        const middleName = document.getElementById("MiddleName").value;
+        const lastName = document.getElementById("LastName").value;
+        const address = document.getElementById("Address").value;
+        const emailId = document.getElementById("EmailId").value;
+        const phoneNo = document.getElementById("PhoneNo").value;
+        if (firstName === "") {
+            alert("Enter First Name");
+        } else if (lastName === "") {
+            alert("Enter Last Name");
+        } else if (address === "") {
+            alert("Enter Address");
+        } else if (!emailId.includes("@gmail.com")) {
+            alert("Invalid Email ID");
+        } else if (phoneNo.toString().length !== 10) {
+            alert("Enter 10 digit Phone Number");
+        } else {
+            const userOtp = document.getElementById("NewUserOTP");
+            userOtp.innerHTML='<input type="number" class="OTP" id="CreateUserOtp">';
+
+            NewUserConfirm.setAttribute("id","CreateUserButtonNew")
+            NewUserConfirm.innerText="Confirm OTP";
+
+            const NewUserOTP = document.getElementById("CreateUserButtonNew")
+
+            NewUserOTP.addEventListener("click",function(e){
+                const NewUserOTPEnter = document.getElementById("CreateUserOtp").value;
+                if(NewUserOTPEnter == 1234){
+
+                    alert("Login Successfull")
+                }
+                else{
+                    console.log(NewUserOTPEnter)
+                    alert("Enter Correct OTP")
+                }
+            })
+
+        }
+    })
+})
 
     
